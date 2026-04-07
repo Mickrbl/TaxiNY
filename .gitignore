@@ -1,0 +1,15 @@
+# Ambienti virtuali
+.venv/
+venv/
+ENV/
+
+# PyCharm e IDE
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Dati (Opzionale: se il file .csv è molto grande, meglio non caricarlo)
+# data/*.csv
