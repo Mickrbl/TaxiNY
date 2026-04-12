@@ -2,14 +2,37 @@
 .venv/
 venv/
 ENV/
+bin/
+lib/
+include/
 
 # PyCharm e IDE
 .idea/
 .vscode/
+*.swp
 
-# Python cache
+# Python cache e compilati
 __pycache__/
 *.py[cod]
+*.so
+.pytest_cache/
 
-# Dati (Opzionale: se il file .csv è molto grande, meglio non caricarlo)
-# data/*.csv
+# --- DATI E MODELLI (IMPORTANTE) ---
+# Non carichiamo i modelli addestrati (sono pesanti)
+models/*.joblib
+models/*.pkl
+
+# Non carichiamo i dataset pesanti
+data/*.csv
+data/*.parquet
+data/*.json
+
+
+# --- SICUREZZA ---
+# Non caricare mai le chiavi API se le metti in un file .env
+.env
+
+models/*.joblib
+data/High_Volume_FHV/
+
+.DS_Store
